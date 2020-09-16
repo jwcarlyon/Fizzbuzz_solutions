@@ -11,10 +11,12 @@ int main()
   int num = 1;
   while(num < 101)
   {
-    char str[8] = {'\0'};
+    char str[8] = {'\0'};//this sets all values to a default - "null" like - value
     if(num % 3 == 0)
     {
       str[0] = 'F'; str[1] = 'i'; str[2] = 'z'; str[3] = 'z';
+      //this format saves space when multiple similar operations
+      // must be done. #include strings.c was too easy.
       if(num % 5 == 0)
       {
         str[4] = 'B'; str[5] = 'u'; str[6] = 'z'; str[7] = 'z';
@@ -25,8 +27,7 @@ int main()
       str[0] = 'B'; str[1] = 'u'; str[2] = 'z'; str[3] = 'z';
     }
     if(str[0] != '\0')
-    {
-      //for(int i = 0; i < strlen(str); i++)
+    {//if the logic found num to be divisible by 3 or 5, this must be true
       int i = 0;
       while(str[i] != '\0')
       {
@@ -38,6 +39,7 @@ int main()
     {
       printf("%i", num);
     }
+    //finally, a new line and an increment for num at the last point in the while loop
     printf("\n");
     num++;
   }
