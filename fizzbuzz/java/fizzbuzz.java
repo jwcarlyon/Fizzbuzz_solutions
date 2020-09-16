@@ -9,18 +9,12 @@ public class fizzbuzz {
       {//modulo operator returns 0 if num is divisible by 3
         str += "Fizz";
       }
-      if(num % 5 == 0)
-      {
-        str += "Buzz";
-      }
+      if(num % 5 == 0){str += "Buzz";}
       if(str.length() > 0)
       {//length is the only built in function besides println and some basic logic and increments
         System.out.println(str);
       }
-      else
-      {
-        System.out.println(num);
-      }
+      else{System.out.println(num);}
       num++;
     }
   }
