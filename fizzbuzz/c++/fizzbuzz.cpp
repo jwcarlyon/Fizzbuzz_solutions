@@ -11,7 +11,8 @@ int main()
   int num = 1;
   while(num < 101)
   {
-    char str[8] = {'\0'};//this sets all values to a default - "null" like - value
+    char str[9] = {'\0'};//this sets all values to a default - "null" like - value
+    //the value is one greater than the length of FizzBuzz, the final char is always \0
     if(num % 3 == 0)
     {
       str[0] = 'F'; str[1] = 'i'; str[2] = 'z'; str[3] = 'z';
