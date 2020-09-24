@@ -12,5 +12,5 @@ Completing the circuit means starting at i and ending up at i again.
 This is a problem which supplies a list of integers and a single integer the
 length of the list.
 The list is an unsorted collection of numbers, with some possible double values.<br>
-The function sockMerchant(<strong>int</strong>n,<strong>dynamic array</strong>ar)
+The function sockMerchant(<strong>int</strong> n,<strong>dynamic array</strong> ar)
 must return the number of matching pairs in ar.
