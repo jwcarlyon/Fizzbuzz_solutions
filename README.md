@@ -13,4 +13,8 @@ This is a problem which supplies a list of integers and a single integer the
 length of the list.
 The list is an unsorted collection of numbers, with some possible double values.<br>
 The function sockMerchant(<strong>int</strong> n, <strong>dynamic array</strong> ar)
-must return the number of matching pairs in ar.
+must return the number of matching pairs in ar.<br><br>
+## counting_valleys
+An avid hiker keeps meticulous records of their hikes. During the last hike that took exactly steps, for every step it was noted if it was an uphill, , or a downhill, step. Hikes always start and end at sea level, and each step up or down represents a unit change in altitude.<br>
+A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level. Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.<Br>
+  The function count_valleys(<strong>int</strong> steps, <strong>string</strong> path) must return an integer value of times the hiker decended below then returned to sea-level.
