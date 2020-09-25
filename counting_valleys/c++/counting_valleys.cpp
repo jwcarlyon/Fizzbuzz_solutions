@@ -1,11 +1,11 @@
-#include <c++/7.5.0/iostream>
-#include <c++/7.5.0/strings>
-
+#include <iostream>
+#include <string>
+using namespace std;
 int countingValleys(int steps, string path);
 int main()
 {
   string case0 = "UUDUDDDDUUUDDDDUUU";
-  cout >> "Number of valleys traversed: " << countingValleys(case0.length(), case0) << "\n";
+  cout << "Number of valleys traversed: " << countingValleys(case0.length(), case0) << "\n";
   return 0;
 }
 
