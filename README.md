@@ -18,3 +18,6 @@ must return the number of matching pairs in ar.<br><br>
 An avid hiker keeps meticulous records of their hikes. During the last hike that took exactly steps, for every step it was noted if it was an uphill, , or a downhill, step. Hikes always start and end at sea level, and each step up or down represents a unit change in altitude.<br>
 A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level. Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.<Br>
   The function count_valleys(<strong>int</strong> steps, <strong>string</strong> path) must return an integer value of times the hiker decended below then returned to sea-level.
+## jumping_on_clouds
+Emma is playing a new mobile game that starts with consecutively numbered clouds. Some of the clouds are thunderheads and others are cumulus. She can jump on any cumulus cloud having a number that is equal to the number of the current cloud plus <strong>1</strong> or <strong>2</strong>.<br>
+She must avoid the thunderheads. Determine the minimum number of jumps it will take Emma to jump from her starting postion to the last cloud. It is always possible to win the game.<br>
