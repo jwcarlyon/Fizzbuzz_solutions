@@ -21,3 +21,15 @@ A valley is a sequence of consecutive steps below sea level, starting with a ste
 ## jumping_on_clouds
 Emma is playing a new mobile game that starts with consecutively numbered clouds. Some of the clouds are thunderheads and others are cumulus. She can jump on any cumulus cloud having a number that is equal to the number of the current cloud plus <strong>1</strong> or <strong>2</strong>.<br>
 She must avoid the thunderheads. Determine the minimum number of jumps it will take Emma to jump from her starting postion to the last cloud. It is always possible to win the game.<br>
+__Output Format__<br>
+
+Print the minimum number of jumps needed to win the game.<br>
+
+__Sample Input 0__<br>
+
+7<br>
+0 0 1 0 0 1 0<br>
+
+<br>Sample Output 0__<br>
+
+4<br>
