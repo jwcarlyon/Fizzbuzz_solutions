@@ -9,7 +9,7 @@ int main()
   //int clouds[] = {0, 1, 0, 0, 0, 1, 0, 1, 0};//return 4
   int size = sizeof(clouds) / sizeof(clouds[0]);
 
-  head = build_binary_graph(clouds, 0, size);//i think i can just use clouds instead of the & operator
+  head = build_binary_graph(clouds, 0, size);//a graph of every possible path through clouds
   printf("Minimum # of jumps: %i\n", greedy_search(head));
 
   return 0;
