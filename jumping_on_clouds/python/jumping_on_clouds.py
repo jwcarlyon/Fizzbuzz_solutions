@@ -15,8 +15,9 @@ class cloud:
 def build_binary_graph(clouds, i):
     n = cloud(clouds[i])
     if(len(clouds) - 2) > i:
-        n.set_one(build_binary_graph(clouds, i + 1))
         n.set_two(build_binary_graph(clouds, i + 2))
+        if(n.two.get_value() == 1):
+            n.set_one(build_binary_graph(clouds, i + 1))
     elif(len(clouds) - 1) > i:
         n.set_one(build_binary_graph(clouds, i + 1))
     return n
@@ -32,5 +33,5 @@ def greedy_search(n):
 if __name__ == "__main__":
     clouds = [0, 1, 0, 0, 1, 0, 1, 0 ,1, 0, 0, 1, 0]
     head = build_binary_graph(clouds, 0)
-    
+
     print("Minimum # of jumps: {}".format(greedy_search(head)))
