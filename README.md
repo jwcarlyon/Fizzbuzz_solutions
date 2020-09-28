@@ -30,6 +30,16 @@ __Sample Input 0__<br>
 7<br>
 0 0 1 0 0 1 0<br>
 
-<br>Sample Output 0__<br>
+__Sample Output 0__<br>
 
 4<br>
+## repeated_string
+The repeatedString function should return an integer representing the number of occurrences of __a__ in the prefix of length __n__ in the infinitely repeating string.<br>
+Print a single integer denoting the number of letter a's in the first __n__ letters of the infinite string created by repeating infinitely many times.<br>
+__Sample Input 0__<br>
+
+(string __s__, int __n__)<br>
+(string __'aba'__, int __10__)<br>
+__Sample Output 0__<br>
+
+__7__<br>
