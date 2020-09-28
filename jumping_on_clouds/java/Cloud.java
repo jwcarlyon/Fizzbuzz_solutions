@@ -1,32 +1,17 @@
 public class Cloud
 {
   public int value;
-  public int get_value(){return value;}//values can be easily referenced - while iterating for example
-  public Cloud[] adjacent;
+  public int get_value(){return value;}
+  public Cloud one = null;
+  public Cloud two = null;
   //Cloud constructor
-  public Cloud(int[] clouds, int i)
+  public Cloud(int i){value = i;}
+  public Cloud(Cloud c){value = c.get_value(); one = c.one; two = c.two;}
+  //search method
+  public int greedy_search(Cloud n)
   {
-    value = clouds[i];
-    if(i < clouds.length - 2)
-    {
-      adjacent = new Cloud[] {new Cloud(clouds, i + 2), new Cloud(clouds, i + 1)};
-    }else if(i < clouds.length - 1)
-    {
-      adjacent = new Cloud[] {new Cloud(clouds, i + 1)};
-    }
-    //these
-  }
-  public int greedy_search()//The "public static" allows this function
-  // to act like a global function would in C++.
-  {
-    //Search the binary list with recursion, taking the first available path
-    // the structure of Cloud is that first elements of adjacent are the longest jump
-    //System.out.println("Debug search, adjacent: " + (adjacent));
-    if(adjacent == null){return 0;}
-    for(Cloud x : adjacent)
-    {
-      if(x.get_value() == 0){return 1 + x.greedy_search();}
-    }
-    return 0;
+    if((n.one == null)&& !(n.two == null)){return 1 + greedy_search(n.two);}
+    else if(!(n.one == null)){return 1 + greedy_search(n.one);}
+    else{return 0;}
   }
 }
