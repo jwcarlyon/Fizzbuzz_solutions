@@ -42,4 +42,6 @@ __Sample Input 0__<br>
 (string __'aba'__, int __10__)<br>
 __Sample Output 0__<br>
 
-__7__<br>
+__7__<br><br>
+##nearest_neighbor
+Given 5 shoppers with the following baskets, please code up a nearest-neighbor function to calculate the euclidean distance between each of these shoppers. Which shoppers are more alike? By what percentage? Which shoppers are least alike? Please provide code. <br>__fred__ = ['Banana', 'Coffee', 'Coffee', 'Energy Drink'] <br>__ralph__ = ['Cup Cakes', 'Cigarettes', 'Wine', 'Lighter'] __jeff__ = ['Coffee', 'Fountain Drink', 'Gum', 'Lighter', 'Propane'] <br>__jake__ = ['Candy Bar', 'Energy Drink'] <br>__brian__ = ['Coffee', 'Toy Robot']
