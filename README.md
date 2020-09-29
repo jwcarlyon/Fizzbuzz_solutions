@@ -36,12 +36,13 @@ __Sample Output 0__<br>
 ## repeated_string
 The repeatedString function should return an integer representing the number of occurrences of __a__ in the prefix of length __n__ in the infinitely repeating string.<br>
 Print a single integer denoting the number of letter a's in the first __n__ letters of the infinite string created by repeating infinitely many times.<br>
+Constraints: __1__ <= s.length <= __100__ and __1__ <= n <=__10<sup>12</sup>__
 __Sample Input 0__<br>
 
-(string __s__, int __n__)<br>
-(string __'aba'__, int __10__)<br>
+(string __s__, long __n__)<br>
+(string __'aba'__, long __10__)<br>
 __Sample Output 0__<br>
 
 __7__<br><br>
 ##nearest_neighbor
-Given 5 shoppers with the following baskets, please code up a nearest-neighbor function to calculate the euclidean distance between each of these shoppers. Which shoppers are more alike? By what percentage? Which shoppers are least alike? Please provide code. <br>__fred__ = ['Banana', 'Coffee', 'Coffee', 'Energy Drink'] <br>__ralph__ = ['Cup Cakes', 'Cigarettes', 'Wine', 'Lighter'] __jeff__ = ['Coffee', 'Fountain Drink', 'Gum', 'Lighter', 'Propane'] <br>__jake__ = ['Candy Bar', 'Energy Drink'] <br>__brian__ = ['Coffee', 'Toy Robot']
+Given 5 shoppers with the following baskets, please code up a nearest-neighbor function to calculate the euclidean distance between each of these shoppers. Which shoppers are more alike? By what percentage? Which shoppers are least alike? Please provide code. <br>__fred__ = ['Banana', 'Coffee', 'Coffee', 'Energy Drink'] <br>__ralph__ = ['Cup Cakes', 'Cigarettes', 'Wine', 'Lighter'] <br>__jeff__ = ['Coffee', 'Fountain Drink', 'Gum', 'Lighter', 'Propane'] <br>__jake__ = ['Candy Bar', 'Energy Drink'] <br>__brian__ = ['Coffee', 'Toy Robot']
