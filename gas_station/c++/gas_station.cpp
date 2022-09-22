@@ -3,14 +3,16 @@ using namespace std;
 
 int gas_station(int* A, int* B, int n);
 bool begin_circuit(int* A, int* B, int n, int i);
+
 int main()
 {
-  int A[4] = {5, 1, 2, 3};
-  int B[4] = {0, 3, 0, 8};
+  const int arr[] = {1,2,3,4,5};
+  const int cost[] = {3,4,5,1,2};
+  // int A[4] = {5, 1, 2, 3};
+  // int B[4] = {0, 3, 0, 8};
   //int A[2] = {1, 2};
   //int B[2] = {2, 1};
   int size = sizeof(A) / sizeof(A[0]);
-  //I chose arrays for this because resizing is not necessary
   cout << "Begin at station: " << gas_station(A, B, size) << "\n";
 }
 bool begin_circuit(int* A, int* B, int n, int i)
