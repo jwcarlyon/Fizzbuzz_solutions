@@ -25,8 +25,8 @@ An avid hiker keeps meticulous records of their hikes. During the last hike that
 A valley is a sequence of consecutive steps below sea level, starting with a step down from sea level and ending with a step up to sea level. Given the sequence of up and down steps during a hike, find and print the number of valleys walked through.  
   The function count_valleys(<strong>int</strong> steps, <strong>string</strong> path) must return an integer value of times the hiker decended below then returned to sea-level.
 ## jumping_on_clouds
-Emma is playing a new mobile game that starts with consecutively numbered clouds. Some of the clouds are thunderheads and others are cumulus. She can jump on any cumulus cloud having a number that is equal to the number of the current cloud plus <strong>1</strong> or <strong>2</strong>.  
-She must avoid the thunderheads. Determine the minimum number of jumps it will take Emma to jump from her starting postion to the last cloud. It is always possible to win the game.  
+Emma is playing a new mobile game that starts with consecutively numbered clouds. Some of the clouds are thunderheads and others are cumulus.  She can jump on any cumulus cloud having a number that is equal to the number of the current cloud plus <strong>1</strong> or <strong>2</strong>.  
+She must avoid the thunderheads. Determine the minimum number of jumps it will take Emma to jump from her starting position to the last cloud. It is always possible to win the game.  The input is a list of 1s and 0s where 1s represent 'thunderheads' and must be avoided.  The solution is a binary graph searched with a greedy algorithm  
 __Output Format__  
 Print the minimum number of jumps needed to win the game.  
 
@@ -37,15 +37,14 @@ __Sample Input 0__
 __Sample Output 0__   
 4
 ## repeated_string
-The repeatedString function should return an integer representing the number of occurrences of __a__ in the prefix of length __n__ in the infinitely repeating string.  
-Print a single integer denoting the number of letter a's in the first __n__ letters of the infinite string created by repeating infinitely many times.  
-Constraints: __1__ <= s.length <= __100__ and __1__ <= n <=__10<sup>12</sup>__
+The repeatedString function should return an integer representing the number of occurrences of __a__ within a 'repeated string'. The 'repeated string' is formed from a given sub-string and concatenated onto itself until it reaches a given length __n__.    
+The function must print a single integer noting the number of letter __a__'s in 'repeated string' with length __n__.  
+Constraints: __1__ <= __substring length__ <= __100__ and __1__ <= __n__ <=__10<sup>12</sup>__
 __Sample Input 0__  
 
-(string __s__, long __n__)  
+(string __substring__, long __n__)  
 (string __'aba'__, long __10__)  
-__Sample Output 0__  
-
+__Sample Output 0__   
 __7__  <br>
 ##nearest_neighbor
 Given 5 shoppers with the following baskets, please code up a nearest-neighbor function to calculate the euclidean distance between each of these shoppers. Which shoppers are more alike? By what percentage? Which shoppers are least alike? Please provide code.   __fred__ = ['Banana', 'Coffee', 'Coffee', 'Energy Drink']   __ralph__ = ['Cup Cakes', 'Cigarettes', 'Wine', 'Lighter']   __jeff__ = ['Coffee', 'Fountain Drink', 'Gum', 'Lighter', 'Propane']   __jake__ = ['Candy Bar', 'Energy Drink']   __brian__ = ['Coffee', 'Toy Robot']

@@ -1,38 +1,40 @@
 #include <string>
 #include <stdio.h>
 using namespace std;
-long int repeated_string(string s, long int n);
+long int repeated_string(string substring, long int total_string_length);
+
 int main(){
-  string s = "adagAOdnasspesaosmfsguioaaanoadlkaaapn";
-  //String s = "ada";
-  long int n = 100000000;//length of potential substring
-  //long n = (long)s.length();//length of potential substring
-  printf("Number of occurrences: %ld\n", repeated_string(s, n));
+  // string s = "adagAOdnasspesaosmfsguioaaanoadlkaaapn";
+  // long int n = 100000000;//length of string to be searched
+  string substring = "ada";
+  // long n = (long)s.length();//length of string to be searched
+  long total_string_length = 10;//length of string to be searched
+  printf("Number of occurrences: %ld\n", repeated_string(substring, total_string_length));
+  return 0;
 }
-long int repeated_string(string s, long int n)
+
+long int repeated_string(string substring, long int total_string_length)
 {
   long int count = 0, remainder = 0;
 
-  if(s.length() > n)
+  if(substring.length() > total_string_length)
   {
-    //char[] s_ = s.toCharArray();
-    for(int i = 0; i < n; i++)//iterate through the CharArray and count 'a' occurrences. stop at n
-    {
-      if(s[i] == 'a'){count++;}
-    }
-    return count;
-  }else{
-    int last = (int)(n - ((long int)s.length() * (long int)(n / (long int)s.length())));//for determining any overlap
-    //int last = ((int)n % s.length());//for determining any overlap
-    for(int i = 0; i < s.length(); i++)//iterate though String and count as above
-    {
-      if(s[i] == 'a')
+      for(int i = 0; i < total_string_length; i++)
       {
-        count ++;//we now have the count of 'a's in the string s
-        if(i <  last){remainder ++;}//last is the length of the cutoff string - 0 if no cutoff
+        if(substring[i] == 'a'){ count++; }
       }
-    }
-    count = count * (n / (long int)s.length()) + remainder;
-    return count;
+      return count;
+  } else {
+      int last = (int)(total_string_length - ((long int)substring.length() * (long int)(total_string_length / (long int)substring.length())));//for determining any overlap
+      for(int i = 0; i < substring.length(); i++)
+      {
+          if(substring[i] == 'a')
+          {
+              count ++;
+              if(i <  last){ remainder ++; }
+          }
+      }
+      count = count * (total_string_length / (long int)substring.length()) + remainder;
+      return count;
   }
 }

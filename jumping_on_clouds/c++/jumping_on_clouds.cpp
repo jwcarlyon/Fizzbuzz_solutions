@@ -1,43 +1,42 @@
 #include <iostream>
-struct cloud{int value; cloud *one; cloud *two;};//a binary-form node
-cloud *build_binary_graph(int* ptr, int i, int size);
-int greedy_search(cloud *n);
+
+struct cloud { bool thunderhead; cloud *single_jump; cloud *double_jump; };//a binary-form node
+cloud *build_binary_graph(int* cloud_array, int i, int cloud_array_size);
+int greedy_search(cloud *cloud_node);
 int main()
 {
-  cloud *head;//declaration. no construction, simply a link to our list/graph
+  cloud *head;//simply a link to our graph
   int clouds[] = {0, 1, 0, 0, 1, 0, 1, 0 ,1, 0, 0, 1, 0};//return 7
-  //int clouds[] = {0, 1, 0, 0, 0, 1, 0, 1, 0};//return 4
-  int size = sizeof(clouds) / sizeof(clouds[0]);
+  // int clouds[] = {0, 1, 0, 0, 0, 1, 0, 1, 0};//return 4
+  int cloud_array_size = sizeof(clouds) / sizeof(clouds[0]);
 
-  head = build_binary_graph(clouds, 0, size);//a graph of every possible path through clouds
+  head = build_binary_graph(clouds, 0, cloud_array_size);//a graph of every possible path through clouds
   printf("Minimum # of jumps: %i\n", greedy_search(head));
 
   return 0;
 }
-int greedy_search(cloud *n)
+int greedy_search(cloud *cloud_node)
 {
-  cloud *one = (n -> one);
-  cloud *two = (n -> two);
-  if((two) && ((two -> value) != 1)){return 1 + greedy_search(two);}//the greedy choice is the longer jump - 2
-  else if((one) && !(one -> value)){return 1 + greedy_search(one);}
-  else{return 0;}//there is no dead end array possibility
+  cloud *single_jump = cloud_node->single_jump;
+  cloud *double_jump = cloud_node->double_jump;
+  if((double_jump) && !double_jump->thunderhead){ return 1 + greedy_search(double_jump);}//the greedy choice is the longer jump
+  if((single_jump) && !single_jump->thunderhead){ return 1 + greedy_search(single_jump);}
+  return 0;//there is no dead end array possibility
 }
 
-cloud *build_binary_graph(int *ptr, int i, int size)
+cloud *build_binary_graph(int *cloud_array, int i, int cloud_array_size)
 {
-  //printf("debugging normal i: %i size: %i referenced: %i\n", i, size, ptr[i]);
-  int index = i;
-  cloud *n = new cloud;
+  //printf("debugging normal i: %i cloud_array_size: %i referenced: %i\n", i, cloud_array_size, cloud_array[i]);
+  cloud *cloud_node = new cloud;
 
-  n -> value = ptr[i];
+  cloud_node->thunderhead = cloud_array[i];
 
-  if(size - 2 > i)
+  if(cloud_array_size - 2 > i)
   {
-    (n -> two) = build_binary_graph(ptr, i + 2, size);
-    (n -> one) = build_binary_graph(ptr, i + 1, size);
-  }else if(size - 1 > i)
-  {
-    (n -> one) = build_binary_graph(ptr, i + 1, size);
+    cloud_node->double_jump = build_binary_graph(cloud_array, i + 2, cloud_array_size);
+    cloud_node->single_jump = build_binary_graph(cloud_array, i + 1, cloud_array_size);
+  } else if(cloud_array_size - 1 > i) {
+    cloud_node->single_jump = build_binary_graph(cloud_array, i + 1, cloud_array_size);
   }
-  return n;
+  return cloud_node;//final node has nowhere to jump to
 }
