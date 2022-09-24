@@ -1,43 +1,42 @@
-//#include <c++/7.5.0/bits/stdc++.h>
-#include <c++/7.5.0/vector>
-#include <c++/7.5.0/iostream>
-#include <c++/7.5.0/algorithm>
-
+#include <vector>
+#include <iostream>
+#include <algorithm>
 using namespace std;
-int sockMerchant(int n, vector<int> ar);
-// Complete the sockMerchant function below.
+
+int sock_merchant(vector<int>& sock_pile_vector_reference);
+
 int main()
 {
-  int sequence[] = {10, 28, 49, 10, 111, 101, 10, 28, 49, 101, 101};
-  //int sequence[] = {1, 5, 8, 9, 9, 4, 8, 8, 1, 1, 1, 1, 1, 4};
-  vector<int> ar(sequence, (sequence + sizeof(sequence) / sizeof(int)));
-  cout << "number of pairs: " << sockMerchant(ar.size(), ar) << "\n";
-  return 0;
+    vector<int> sock_pile_vector0 = { 10, 28, 49, 10, 111, 101, 10, 28, 49, 101, 101 };//4 pairs
+    vector<int> sock_pile_vector1 = { 1, 5, 8, 9, 9, 4, 8, 8, 1, 1, 1, 1, 1, 4 };//6 pairs
+    cout << "Case 0, number of pairs: " << sock_merchant(sock_pile_vector0) << "\n";
+    cout << "Case 1, number of pairs: " << sock_merchant(sock_pile_vector1) << "\n";
+    return 0;
 }
 
-int sockMerchant(int n, vector<int> ar)
+int sock_merchant(vector<int>& sock_pile_vector_reference)
 {
-    //find the pairs in the list
+    vector<int> sock_pile_vector = sock_pile_vector_reference;
     int pairs = 0;
     int count = 0;
-    sort(ar.begin(), ar.end());
-    vector<int>::iterator last = ar.begin();//-1;
-    for(auto i = ar.begin(); i < ar.end(); ++i)
-    {
-        if(*last == *i)
+    /*sort is implemented with a hybid of insertionsort and introsort
+    the worst case runtime is O(n*log2(n)), where n is the vector length*/
+    vector<int>::iterator last_observed_sock_pointer = sock_pile_vector.begin();
+    vector<int>::iterator final_sock_pointer = sock_pile_vector.end();
+    sort(last_observed_sock_pointer, final_sock_pointer);
+    for(auto current_sock_pointer = last_observed_sock_pointer;
+      current_sock_pointer < final_sock_pointer;
+      current_sock_pointer++
+    ) {
+        if(*last_observed_sock_pointer == *current_sock_pointer)
         {
           count++;
-          //cout << "found match, last: " << *last << " iterator value: " << *i << "count: " << count << "\n";
+          continue;
         }
-        else
-        {
-            pairs += (count / 2);
-            //pairs += (count % 2) + (count / 2);
-            //cout << "no match, last: " << *last << " iterator value: " << *i << " pairs: " << pairs << "\n";
-            last = i;
-            count = 1;
-        }
+        pairs += (count / 2);
+        last_observed_sock_pointer = current_sock_pointer;
+        count = 1;
     }
-    pairs += (count / 2);
+    pairs += (count / 2);//this is ok because integer division always rounds down
     return pairs;
 }
