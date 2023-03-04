@@ -66,6 +66,7 @@ def dot_search(normal_vectors):
                     #names = "{} and {} at: {}".format(docs[vecs.index(w)], docs[i], dot)
                     top = dot #new best combination
     return search
+    
 if __name__ == "__main__":
     dct = {"fred" : ['Banana', 'Coffee', 'Coffee', 'Energy Drink'],
         "ralph" : ['Cup Cakes', 'Cigarettes', 'Wine', 'Lighter'],

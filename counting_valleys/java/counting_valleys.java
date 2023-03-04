@@ -13,11 +13,11 @@ public class counting_valleys
     case_list.add("UUDUDDDDUUUDDDDUUU");
     case_list.add("DDDUUUDDDUUUUDDDUUU");
 
-    case_list.forEach((case) ->
-        System.out.println(
-            String.format("Number of valleys traversed: %s", count_valleys(case))
-        );
-    );
+    case_list.forEach(case -> {
+        // System.out.println(
+        //     String.format("Number of valleys traversed: %s", count_valleys(case))
+        // );
+    });
   }
   public static int count_valleys(String path)
   {

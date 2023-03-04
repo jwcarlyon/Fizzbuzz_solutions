@@ -1,0 +1,10 @@
+{
+  "endpointName": "deleteUser",
+  "definition": "removes a user from the database",
+  "parameters": "a user id string",
+  "uris": [
+    "api1_name.dev/delete-user",
+    "api1_name.test/delete-user",
+    "api1_name.prod/delete-user",
+  ]
+}

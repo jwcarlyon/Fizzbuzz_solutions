@@ -50,3 +50,7 @@ __7__  <br>
 Given 5 shoppers with the following baskets, please code up a nearest-neighbor function to calculate the euclidean distance between each of these shoppers. Which shoppers are more alike? By what percentage? Which shoppers are least alike? Please provide code.   __fred__ = ['Banana', 'Coffee', 'Coffee', 'Energy Drink']   __ralph__ = ['Cup Cakes', 'Cigarettes', 'Wine', 'Lighter']   __jeff__ = ['Coffee', 'Fountain Drink', 'Gum', 'Lighter', 'Propane']   __jake__ = ['Candy Bar', 'Energy Drink']   __brian__ = ['Coffee', 'Toy Robot']
 ## table of contents
 Given a pdf formatted in pdf 1.5, parse the document and return the table of contents. The return value must be an array of (php) objects which is easily read and parsed by a potential employer
+
+## filesystem_crawl_json_modifier
+This is solution for modifying some json metadata which describe the different endpoints contained within all the APIs available through the included file structure. The idea is to add a description of what environments the
+endpoint is made available.

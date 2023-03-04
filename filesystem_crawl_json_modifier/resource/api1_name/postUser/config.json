@@ -1,0 +1,10 @@
+{
+  "endpointName": "postUser",
+  "definition": "creates a new user",
+  "parameters": "a CreateUser json object",
+  "uris": [
+    "api1_name.dev/post-create-user",
+    "api1_name.test/post-create-user",
+    "api1_name.prod/post-create-user",
+  ]
+}

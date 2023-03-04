@@ -1,0 +1,10 @@
+{
+  "endpointName": "getAdminList",
+  "definition": "returns a list of administrators as json objects",
+  "parameters": "none",
+  "uris": [
+    "api1_name.dev/get-admin-list",
+    "api1_name.test/get-admin-list",
+    "api1_name.prod/get-admin-list",
+  ]
+}

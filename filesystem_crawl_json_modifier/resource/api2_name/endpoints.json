@@ -1,0 +1,34 @@
+{[
+    {
+        "name": "getUserList",
+        "environments": [
+          "dev": true,
+          "test": true,
+          "prod": false
+        ]
+    },
+    {
+        "name": "getAdminList",
+        "environments": [
+          "dev": false,
+          "test": false,
+          "prod": false
+        ]
+    },
+    {
+        "name": "postUser",
+        "environments": [
+          "dev": true,
+          "test": true,
+          "prod": false
+        ]
+    },
+    {
+        "name": "deleteUser",
+        "environments": [
+          "dev": true,
+          "test": true,
+          "prod": false
+        ]
+    }
+]}

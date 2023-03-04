@@ -1,0 +1,10 @@
+{
+  "endpointName": "getUserList",
+  "definition": "returns a list of users as json objects",
+  "parameters": "none",
+  "uris": [
+    "api1_name.dev/get-user-list",
+    "api1_name.test/get-user-list",
+    "api1_name.prod/get-user-list",
+  ]
+}
